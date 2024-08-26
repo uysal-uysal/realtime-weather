@@ -12,7 +12,7 @@
 
 Proje geliştirme süreci, ilk olarak ‘**OpenWeatherMap’** üzerinden gerçek zamanlı olarak verilerin çekilmesi ile başladı.
 
-- ## Fetch Data
+ ## Fetch Data
 
 Bu noktada önce kullanıcının ‘**latitude’** ve ‘**longitude’** verilerine ‘**ipinfo.io**’ aracılığı ile erişim sağlandı. İlgili ‘end-point’e bir istek yapılarak dönen ‘response’dan kullanıcın ‘lat’ ve ‘lon’ değerleri alındı.
 
@@ -20,11 +20,11 @@ Ardından alınan bu değerler ‘**OpenWeatherMap’e** iletildi ve sonucunda k
 
 ‘OpenWeatherMap’ dokümanından yararlanarak veriden, ‘**temperature’**, ‘**humidity’**, ‘**feels_like’**, ‘**city’**, ‘**clouds’**, ‘**location’**, ‘**wind_speed’** ve ‘**wind_direction**’ özellikleri çıkartıldı.
 
-- ## Validate Data
+## Validate Data
 
 Elde edilen bu veriler, ‘**InfluxDB’** ye yazılmadan önce ‘**pydantic’** kullanarak verilen aralıkara göre kontrol edildi ve bu sınırlar özelinde aykırı değer olma ihitmaline karşı uyarı verecek şekilde kurgulandı.
 
-- ## Write Data
+## Write Data
 
 Elde verilerin ‘**InfluxDB’ye** yazılmadan önce ilgili kurumlar yapıldı. Bu noktada ‘**InfluxDB’** dokümanından ve çeşitli kaynaklardan yararlanıldı.
 
@@ -36,7 +36,7 @@ Bu işlemlerden sonra ‘**local’de** çalışan bir ‘**InfluxDB’** client
 
 Bu sayede ‘**OpenWeatherMap’den** alınan bir veri, ‘**InfluxDB’ye** kayıt edilebilir hale geldi.
 
-- ## Automation and Monitoring
+## Automation and Monitoring
 
 Önceki adımlar sonucunda, ‘**OpenWeatherMap’den** alınan ve yalnızca bir ‘t’ anına ait veri başarılı bir şekilde ‘**InfluxDB’** ye kayıt edilmişti.
 
@@ -55,7 +55,7 @@ Tüm bu işlemlerin ‘**apscheduler’a** ile otomatize edilmesi şu sırayla g
 
 Bu noktada, ‘t’ anına ait hava durumu verisi ‘**1 dakika**’ aralıklarla ‘**OpenWeatherMap’den** alınıyor, ‘**pydantic**’ tarafından doğrulanıyor ve ‘**InfluxDB’ye** yazılıyor.
 
-- ## Machine Learning Operations
+## Machine Learning Operations
 
 **Önemli Not:** Çalışmanın bu kısmında ‘**InfluxDB**’ye yazılan 2 günlük ve ‘**Konya**’ iline ait, 1 dakika aralıklarla tutulmuş veriler kullanılmıştır.
 
@@ -63,7 +63,7 @@ Bu sebepten dolayı ilgili çalışmaların başarı sonuçlarının yetersiz ol
 
 Tüm **‘Machine Learning, Exploratory Data Analysis ve Visualization’** işlemleri ‘**ML_ops.ipynb’** dosyası içerisinde bulunmaktadır.
 
-- ## User Interface
+## User Interface
 
 ‘**InfluxDB**’ye yazılan, temizlenmiş ve doğrulanmış veriyi bir web sitesinde göstermek için ‘**React’** kullanıldı.
 
