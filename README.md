@@ -1,8 +1,18 @@
 # Real Time Weather Application
 
+* [Fetch Data](#fetch-data)
+* [Validate Data](#validate-data)
+* [Write Data](#write-data)
+* [Automation and Monitoring](#automation-and-monitoring)
+* [Machine Learning Operations](#machine-learning-operations)
+* [User Interface](#user-interface)
+* [Sonuç](#sonuç)
+
+
+
 Proje geliştirme süreci, ilk olarak ‘**OpenWeatherMap’** üzerinden gerçek zamanlı olarak verilerin çekilmesi ile başladı.
 
-- ## Fetch Weather Data from ‘OpenWeatherMap’
+- ## Fetch Data
 
 Bu noktada önce kullanıcının ‘**latitude’** ve ‘**longitude’** verilerine ‘**ipinfo.io**’ aracılığı ile erişim sağlandı. İlgili ‘end-point’e bir istek yapılarak dönen ‘response’dan kullanıcın ‘lat’ ve ‘lon’ değerleri alındı.
 
@@ -14,7 +24,7 @@ Ardından alınan bu değerler ‘**OpenWeatherMap’e** iletildi ve sonucunda k
 
 Elde edilen bu veriler, ‘**InfluxDB’** ye yazılmadan önce ‘**pydantic’** kullanarak verilen aralıkara göre kontrol edildi ve bu sınırlar özelinde aykırı değer olma ihitmaline karşı uyarı verecek şekilde kurgulandı.
 
-- ## Write Data to InfluxDB
+- ## Write Data
 
 Elde verilerin ‘**InfluxDB’ye** yazılmadan önce ilgili kurumlar yapıldı. Bu noktada ‘**InfluxDB’** dokümanından ve çeşitli kaynaklardan yararlanıldı.
 
