@@ -6,7 +6,7 @@
 * [Automation and Monitoring](#automation-and-monitoring)
 * [Machine Learning Operations](#machine-learning-operations)
 * [User Interface](#user-interface)
-* [Sonuç](#sonuç)
+* [Conclusion](#conclusion)
 
 
 
@@ -111,7 +111,7 @@ Grafik üzerinde çeşitli filtrelemeler ve görüntüleme seçenekleri.
 **‘/weather**’ ‘**endpoint**’inden alınan veririn seçilen ‘**feature**’ özelinde dağılım grafiği.
 
 
-# SONUÇ
+# Conclusion
 
 Bu proje, gerçek zamanlı hava durumu verilerini toplama, doğrulama, depolama ve görselleştirme süreçlerini baştan sona deneyimleme fırsatı sundu. İlk etapta, ‘**OpenWeatherMap API'**sinden hava durumu verilerini çekme sürecinden başlayarak, bu verilerin ‘**InfluxDB’** gibi bir zaman serisi veritabanına kaydedilmesi ve ardından bu verilerin kullanıcılara sunulması için gerekli otomasyon süreçlerini inşa ettim.
 
